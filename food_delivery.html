@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Food Order</title>
+    <link rel="stylesheet" href="food.css"> <!-- Link to CSS file -->
+</head>
+
+<body>
+    <!--  -->
+    <nav class="reestar">
+        <br>
+        <h1>FooDeliver</h1> <br>
+        <ul>
+            <li> Home | Receipe | Contact</li>
+        </ul>
+    </nav>
+    <!--  -->
+    <div class="image">
+
+        <div class="box">
+            <img id="newimg"
+                src="https://imgs.search.brave.com/fmw0Wxl9Kwp8_1Y_w2TxD6FkfI4TdLJfoTFPqkwUJ24/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWdz/LnNlYXJjaC5icmF2/ZS5jb20veGwwdFY2/OEhOUU9oLTU1SFJr/aURRUkx3bnpUQUMt/U2hvTU5xOWIzenVi/by9yczpmaXQ6NTAw/OjA6MDowL2c6Y2Uv/YUhSMGNITTZMeTlw/TG5CcC9ibWx0Wnk1/amIyMHZiM0pwL1oy/bHVZV3h6THpGakx6/Z3cvTDJabUx6RmpP/REJtWmpnei9aV0pp/WVRJMU1qQmpNbVUz/L1pUQXdaRFExT1Ro/a01qZ3kvTG1wd1p3"
+                alt="Image1" class="i1"><br>
+            <p>Vada is a type of fried snack from India, often served as a breakfast or snack item.
+                It can be made from various ingredients like black lentils or potatoes.</p><br>
+            <button onmouseover="changeimg()"><a id="textchange" href=""> Order Pongal @ $2 </a></button>
+        </div>
+
+        <div class="box">
+            <img src="https://imgs.search.brave.com/WgHmH4Js2j3ciW2U8Fds3qkwRo13h44LC5eWUNcbLlk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWdz/LnNlYXJjaC5icmF2/ZS5jb20vQlNCbmRO/amRPYUVZcC1VWEZ5/WXFTVkdkRWFPNjgw/dDZWdGNIdThYVGM1/dy9yczpmaXQ6NTAw/OjA6MDowL2c6Y2Uv/YUhSMGNITTZMeTkw/TXk1bS9kR05rYmk1/dVpYUXZhbkJuL0x6/RXdMemc0THpZeUx6/VTQvTHpNMk1GOUdY/ekV3T0RnMi9NalU0/TURGZlV6QmlSRXhC/L2RtcEpUMVJUTTBw/Q1FuUm4vVWxoQ1lt/NWlaRWRRYVUwdy9R/MVF1YW5Cbg"
+                alt="Image2" class="i1"><br>
+            <p>Ven pongal is a popular South Indian breakfast dish, made with rice and moong dal, cooked in milk and
+                seasoned with spices like cumin and black pepper.</p><br>
+            <a href=""> Order Poori @ $2 </a>
+        </div>
+        <div class="box">
+            <img src="https://imgs.search.brave.com/GhXVzMOauIwBtBthx30zCQ6H8In538Z5PlurNbOqfmE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWdz/LnNlYXJjaC5icmF2/ZS5jb20vSC10Tndj/VnBNdk5QQ0ZEVjg0/cjdnaEU0M25WQVFB/NFhEVEl0bjBrWnNO/NC9yczpmaXQ6NTAw/OjA6MDowL2c6Y2Uv/YUhSMGNITTZMeTl0/WldScC9ZUzVwYzNS/dlkydHdhRzkwL2J5/NWpiMjB2YVdRdk1U/TXovTkRVMk9UZ3hN/aTl3YUc5MC9ieTly/WlhKaGJHRXRabTl2/L1pDMWpkV2x6YVc1/bExYQnYvY205MGRH/RXRkMmwwYUMxMi9a/V2RsZEdGaWJHVXRZ/M1Z5L2Nua3VhbkJu/UDNNOU5qRXkvZURZ/eE1pWjNQVEFtYXow/eS9NQ1pqUFZCSVFr/d3pSbnBUL1dVVlVa/RE5WU25sd1VWRmYv/UVRKR1ZIUjNhMVJF/YW5SRC9WV1ZCTTJO/V1V6SnJObk05"
+                alt="Image3" class="i1"><br>
+            <p>Poori, also known as puri, is a deep-fried Indian bread made from wheat flour. It puffs up when fried and
+                is often served with potato curry or chana masala.</p><br>
+            <a href="">Order Parota @ $0.5</a>
+        </div>
+        <div class="box">
+            <img src="https://imgs.search.brave.com/maE_REbLrqIW1n5afEHM--Q7a9hFxW-oP2J5WdoIZ-g/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWdz/LnNlYXJjaC5icmF2/ZS5jb20vYmh2RFlE/aXI2WWluNy05dG5m/U0NFeTBma3dibUNS/ajZkM0lWTTFLMmpq/VS9yczpmaXQ6NTAw/OjA6MDowL2c6Y2Uv/YUhSMGNITTZMeTl0/WldScC9ZUzVwYzNS/dlkydHdhRzkwL2J5/NWpiMjB2YVdRdk5E/ZzEvTVRFM05USTJM/M0JvYjNSdi9MMk4x/Y21RdGNtbGpaUzF2/L2NpMTViMmQxY25R/dGNtbGovWlM1cWNH/Y19jejAyTVRKNC9O/akV5Sm5jOU1DWnJQ/VEl3L0ptTTlkVFE1/ZWtaUWNtbFkvYlhs/c1oxRm5kRGRyVlV0/NC9UWGxYTjJ0eGMz/TlRZeTEwL1VrcGZk/MUpaWDJaT2J6MA"
+                alt="Image4" class="i1"><br>
+            <p>Curd rice, also known as thayir sadam, is a popular South Indian dish made from cooked rice and yogurt
+                and can be served as a cooling dessert or side dish.</p><br>
+            <a href="">order Curd @ $2</a>
+        </div>
+    </div>
+    <!--  -->
+
+    <div class="abtus">
+        <h1>About Us</h1>
+        <p id="about" style="font-size: 34px;">South Indian cuisine is renowned for its unique flavors and dishes. A
+            South Indian food company could focus on popular items like dosas, vadas, and idlis, which are staples in
+            the region. These dishes are often served with sambar, chutney, and rasam, creating a balanced and flavorful
+            meal. Additionally, thalis, which are platters filled with a variety of dishes, are a common offering that
+            allows customers to experience a range of South Indian flavors in one sitting.
+
+            To stand out, the company might highlight specific ingredients or cooking methods. For instance,
+            incorporating traditional cooking techniques such as tandoori or dum pukht can intrigue customers familiar
+            with these methods. Using unique names that hint at the cuisine can also attract attention. For example,
+            names like "Lotus Feast" or "Peacock Parlor" can evoke cultural and spiritual symbols of India, making the
+            brand more memorable</p>
+
+        <p>Order Details</p>
+        <br>
+        <p id="a">Name</p>
+        <p id="d" >Address</p>
+        <p id="e" >Ph no</p>
+        <br>
+        <br>
+        <a id="game" href="#" style="background-color: rgb(69, 61, 61); padding: 10px;">Guess a number once order is
+            placed🙌!</a>
+    </div>
+
+    <!--  -->
+
+
+    <div class="contactdetials">
+        <h1 style="padding-top: 20x;">Conect for Updates/Offers</h1>
+        <form class="form">
+            <table>
+                <tr>
+                    <td>Name</td>
+                    <td onkeyup="n1()" id="nme"><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>Order Item</td>
+                    <td id="item"><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>Quantity</td>
+                    <td id="qty"><input type="number"></td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td onkeyup="n1()" id="loc"><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>Ph no</td>
+                    <td onkeyup="n1()" id="ph"><input type="number"></td>
+                </tr>
+            </table>
+            <button onclick="newchange(event)" id="newbutton">Send Order</button>
+        </form>
+    </div>
+    <!--  -->
+</body>
+
+</html>
+
+<script>
+    var element = document.getElementById("newimg")
+    function changeimg() {
+        element.src = "https://imgs.search.brave.com/68Da1285pYfiPK0lX0KrkfHfToQlyJ7wX5flZrFMzHQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWdz/LnNlYXJjaC5icmF2/ZS5jb20vNzJReW1R/MGQ1MHZfSjhDSWdN/WVVkakE2MGNYdG5q/LVUxZzl4Ql9Qci1N/dy9yczpmaXQ6NTAw/OjA6MDowL2c6Y2Uv/YUhSMGNITTZMeTkz/ZDNjdS9jMmhoY20x/cGMzQmhjM05wL2Iy/NXpMbU52YlM5M2ND/MWovYjI1MFpXNTBM/M1Z3Ykc5aC9aSE12/TWpBeE1pOHdNaTlX/L1pXNVFiMjVuWVd3/MExtcHcvWnc"
+    }
+    function newchange(event) {
+        event.preventDefault(); // Stop form from reloading the page
+
+        var r1 = document.querySelector("#nme input").value;
+        var r2 = document.querySelector("#item input").value;
+        var r3 = document.querySelector("#qty input").value;
+        var r4 = document.querySelector("#loc input").value;
+        var r5 = document.querySelector("#ph input").value;
+
+        document.getElementById("a").textContent = r1;
+        document.getElementById("d").textContent = r4;
+        document.getElementById("e").textContent = r5;
+        document.getElementById("game").href = "guess.html"
+        document.getElementById("game").style.backgroundColor = "green"
+
+    }
+    function n1() {
+        var a1 = document.querySelector("#nme input").value;
+        var a4 = document.querySelector("#loc input").value;
+        var a5 = document.querySelector("#ph input").value;
+
+        document.getElementById("a").textContent = a1;
+        document.getElementById("d").textContent = a4;
+        document.getElementById("e").textContent = a5;
+    }
+</script>

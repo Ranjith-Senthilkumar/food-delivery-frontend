@@ -1,0 +1,135 @@
+<body>
+    <nav class="reestar">
+        <br>
+        <h1>FooDeliver</h1> <br>
+
+    </nav>
+    <!--  -->
+    <div class="new">
+        <div class="old">
+            <h1 class="h">Guess the number(between 1 and 10)</h1>
+            <input id="inp">
+            <button class="btn" onclick="change()">check</button>
+            <p id="para" style="font-size: 45px;">You are right/wrong!</p>
+            <span>Your Current Score :</span> <span id="points">0</span>
+            <p>"Note : Final score is when you got the number right - Click "Check" until you get correct number!</p>
+        </div>
+    </div>
+    <!-- 
+     -->
+    <div class="contactdetials">
+        <h1 style="padding-top: 20x;">Thanks for ordering!❤️</h1>
+        <form class="form">
+            <table>
+                <tr>
+                    <td>Name</td>
+                    <td id="nme"><input type="text"></td>
+                </tr>
+
+                <button onclick="newchange(event)" id="newbutton">Send feedback</button>
+        </form>
+    </div>
+</body>
+<script>
+    var points = 30;
+    function change() {
+        var random = Math.floor(Math.random() * 10) + 1
+        var input = Number(document.getElementById("inp").value)
+        var output = " "
+        var clr = document.getElementById("para")
+        if (random === input) {
+            output = "You Are Right! Number Is : "+ random
+            
+            clr.style.color = "green"
+            alert("You got it! 🎯 " + points+"/30")
+        }
+        else {
+            points = points - 1
+            clr.style.color = "red"
+            output = "You Are Wrong! The correct number was " + random
+
+        }
+        document.getElementById("para").textContent = output
+        document.getElementById("points").textContent = points
+    }
+</script>
+
+<!--     -->
+
+
+<style>
+    * {}
+
+    .new {
+        justify-content: center;
+        text-align: center;
+        margin-top: 13.5%;
+        display: flex;
+        ;
+    }
+
+    .old {
+        background-color: grey;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+
+    input {
+        font-size: 50px;
+    }
+
+    button {
+        font-size: 40px;
+    }
+
+    p,
+    span {
+        font-size: 40px;
+    }
+
+    /* 
+     */
+    nav {
+        background-color: black;
+        font-size: 30px;
+        height: 190px;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    h1 {
+        color: white;
+        display: block;
+        text-align: center;
+    }
+
+    /*  */
+
+    .contactdetials {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: black;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .form {
+        display: flex;
+        padding: 20px;
+    }
+
+    tr,
+    td {
+        font-size: 30px;
+    }
+</style>
