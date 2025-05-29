@@ -1,73 +1,93 @@
+/* Reset and base styles */
 * {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* Navigation */
 nav {
     background-color: black;
-    font-size: 30px;
-    height: 190px;
+    font-size: clamp(18px, 2.5vw, 24px); /* Responsive font size */
+    height: auto;
+    min-height: 120px; /* Reduced from 190px */
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
+    padding: 20px;
 }
 
 h1 {
     color: white;
     display: block;
     text-align: center;
+    font-size: clamp(20px, 3vw, 28px);
 }
 
 ul {
     display: flex;
-    -ms-flex-align: center;
+    align-items: center;
     justify-content: center;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+    gap: 20px;
 }
-
 
 li {
     list-style: none;
     cursor: pointer;
     color: grey;
+    padding: 10px;
 }
 
+/* Main content */
 .image {
     display: flex;
-    -ms-flex-align: center;
+    align-items: center;
     justify-content: center;
-    margin-top: 220px;
-    margin-bottom: 90px;
-
+    margin-top: 140px; /* Reduced to match smaller nav */
+    margin-bottom: 50px;
+    padding: 20px;
 }
 
 .box {
-    height: 800px;
-    width: 470px;
+    height: auto; /* Make flexible */
+    max-height: 600px; /* Set max instead of fixed */
+    width: 100%;
+    max-width: 400px; /* Responsive width */
     background-color: grey;
     display: flex;
     flex-direction: column;
     border: 2px solid white;
     align-items: center;
+    padding: 15px;
 }
 
 .i1 {
-    height: 580px;
-    width: 470px;
-
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover; /* For images */
 }
 
 p {
-    font-size: 26px;
+    font-size: clamp(16px, 2vw, 20px); /* Responsive text */
     padding: 10px;
+    line-height: 1.4;
 }
 
-a,button {
+a, button {
     background-color: rgb(36, 35, 35);
     color: white;
-    font-size: 35px;
-
+    font-size: clamp(18px, 2.5vw, 24px); /* Responsive button text */
+    padding: 12px 20px;
+    border: none;
+    text-decoration: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
+/* Contact section */
 .contactdetials {
     position: relative;
     bottom: 0;
@@ -79,27 +99,77 @@ a,button {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    padding: 30px 20px;
 }
 
 .form {
     display: flex;
     padding: 20px;
+    flex-direction: column; /* Stack on mobile */
+    gap: 15px;
+    width: 100%;
+    max-width: 500px;
 }
 
-tr,
-td {
-    font-size: 30px;
+tr, td {
+    font-size: clamp(16px, 2vw, 20px); /* Responsive table text */
+    padding: 8px;
 }
 
 .abtus {
     background-color: grey;
     color: black;
-    height: 600px;
+    height: auto; /* Make flexible */
+    min-height: 400px;
     margin-bottom: 20px;
-    padding: 15px;
+    padding: 20px;
     text-align: center;
 }
 
-input {
-    font-size: 100%;
+input, textarea, select {
+    font-size: 16px; /* Standard size for mobile */
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+/* Media queries for different screen sizes */
+@media (max-width: 768px) {
+    nav {
+        font-size: 16px;
+        min-height: 100px;
+        padding: 15px;
+    }
+    
+    .image {
+        margin-top: 120px;
+        padding: 10px;
+    }
+    
+    .box {
+        max-width: 90%;
+        padding: 10px;
+    }
+    
+    .form {
+        flex-direction: column;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        min-height: 80px;
+        padding: 10px;
+    }
+    
+    .image {
+        margin-top: 100px;
+    }
+    
+    ul {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
